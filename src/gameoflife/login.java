@@ -7,7 +7,7 @@ package gameoflife;
 
 /**
  *
- * @author tre
+ * @author gatsby
  */
 public class login {
 
