@@ -13,13 +13,20 @@ public class login {
 
     String name, password;
     
-    
+    /**
+     *
+     * @param name user's name, a username, if you will
+     * @param password user's password
+     * @return
+     */
     public boolean checkLogin(String name, String password)
     {
-        if((name == this.name) && (password == this.password))
+        if(name.equals(this.name) && (password.equals(this.password)))
         {
             return true;
+            //call start of main function here?
         }
-        return false;
+        else
+            return false;
     }
 }
