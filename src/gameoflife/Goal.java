@@ -1,8 +1,6 @@
 package gameoflife;
 
-import java.util.EnumMap;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  *
@@ -11,24 +9,23 @@ import java.util.Map;
 
 public class Goal {
     
-    
-    int rewardStat;
-    String name;
-    HashMap<String, Integer> statMap;
-    
-    Goal(String name, int reward, String type)
+    String name ,discription, type;
+    public void makeGoal(String name, int reward, String type, String description)
     {
-        this.statMap = new HashMap<String, Integer>();
-        rewardStat = reward;
+        //uses statMap class to create a hashmap with the stat names assigned and defaults to 0 for all stats
+        HashMap<String, Integer> rewardStat = statMap.createMap();
+        rewardStat.put(type, reward);
+        
         this.name = name;
-        statMap.put(type, reward);
-        
-        
+ //spellcheck    vvv----- && ----vvv
+        this.discription = description;
+        this.type = type;
     }
-    
+
     void completeGoal()
     {
         //TODO: add code for the competion of goals
+        
     }
     
     void abandonGoal()
