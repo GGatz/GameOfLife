@@ -2,28 +2,35 @@
 
 package gameoflife;
 
+import java.util.LinkedList;
+
 /**
  *
  * @author Gatsby
+ * this class manages the party of friends which is the class that Boss Fight uses to calculate the fight
  */
 public class Party {
     
     int partySize;
-    Avatar[] party;
+    LinkedList<Avatar> partyOfFriends = new LinkedList<Avatar>();
     
-    void addToParty()
+    void addToParty(Avatar avatar)
     {
-        //TODO: add to party adds the user's friend's avatar to the array that represents the party
+        this.partyOfFriends.add(avatar);
+        
     }
     
     void addStats(Avatar[] party)
     {
-       for(int i = 0; i <= partySize ;i++)
-       {
-           for(int j = 0; j <= partySize ; j++)
-           {
-               party[i][j]
-           }
+        int INT,STR,DEX,CON;
+        
+       for(int i  = 0;i < partyOfFriends.size(); i++)
+       {   
+           INT =+ partyOfFriends.get(i).avatarStats.get("INT");
+           STR =+ partyOfFriends.get(i).avatarStats.get("STR");
+           DEX =+ partyOfFriends.get(i).avatarStats.get("DEX");
+           CON =+ partyOfFriends.get(i).avatarStats.get("CON");
+           
        }
     }
 

@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 public class Goal {
     
-    String name ,discription, type;
+    String name ,description, type;
     public void makeGoal(String name, int reward, String type, String description)
     {
         //uses statMap class to create a hashmap with the stat names assigned and defaults to 0 for all stats
@@ -17,8 +17,7 @@ public class Goal {
         rewardStat.put(type, reward);
         
         this.name = name;
- //spellcheck    vvv----- && ----vvv
-        this.discription = description;
+        this.description = description;
         this.type = type;
     }
 
